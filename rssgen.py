@@ -207,4 +207,4 @@ asd.write(ch)
 asd.write(rs)
 asd.seek(0)
 asd.close()
-print "Se añadio el Feed satisfactoriamenteel puedes ver el archivo feed.xml para confirmalo"
+print "Se añadio el Feed satisfactoriamente puedes ver el archivo feed.xml para confirmarlo"
