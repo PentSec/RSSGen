@@ -71,7 +71,7 @@ def logo():
 """
 
 def genxml():
-    print "Este Programa te Generara Autamaticamente tus RRS y te creara un archivo en estara en la misma direccion.\n"
+    print "Este Programa te Generara Autamaticamente tus RRS y te creara un archivo que estara en la misma direccion.\n"
 
 def checkxml():
     try:
@@ -80,7 +80,7 @@ def checkxml():
         if isxmlf:
             return xmlf
         else:
-            print "no tienes el archivo RSS. Desea crearlo? s:para continuar  n:para cancelar"
+            print "no tienes el archivo RSS. Deseas crearlo? s:para continuar  n:para cancelar"
             pregunta=raw_input("S/N: ")
             if pregunta == "s":
                 xmlfile = open('feed.xml', 'w')
