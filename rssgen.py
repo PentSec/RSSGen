@@ -13,11 +13,12 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+version='1.1 Estable'
 #librerias necesarias
 import datetime
 import os
 import sys
+import argparse
 from copy import copy
 from copy import deepcopy
 #mira el README.MD y mira lo que falta.
@@ -66,9 +67,29 @@ def logo():
                                               
    Este codigo esta hecho por PentSec.
         Email: pentsec@cock.li
-     web: https://pentsec.github.io   
+     web: https://pentsec.github.io 
+Uriliza rssgen.py -h para ver las opciones  
 --------------------------------------------------                        
 """
+
+analizador = argparse.ArgumentParser(prog='rssgen.py',usage='python2 rssgen.py',description='Con este programa puedes generar archivos RSS para ponerlos en tu web. basico y simple de utilizar :D cualquier duda mi correo pentsec@cock.li puedes encontrarme en irc.stormbit.net #shl y #linux :D')
+analizador.add_argument("-u", "--update", help="Actualiza RSSGen a la mas version mas reciente.", action="store_true")
+analizador.add_argument("-v", "--version", help="Version de RSSGen", action="store_true")
+muestra = analizador.parse_args()
+
+# Aquí procesamos lo que se tiene que hacer con cada argumento
+if muestra.update:   
+       print "Actualizando RSSGen..."
+       print ""
+       print "Mostrando Cambios.."
+       os.system("git pull")
+       print "RSSGen Se actualizo correctamente."
+       os._exit(0)
+
+# Version de la herramienta.
+if muestra.version:
+    print "Versión: ",version
+    os._exit(0)
 
 def genxml():
     print "Este Programa te Generara Autamaticamente tus RRS y te creara un archivo que estara en la misma direccion.\n"
@@ -95,7 +116,7 @@ def checkxml():
                sys.exit(0)
     except KeyboardInterrupt:
         print "Saliendo."
-        pass
+        sys.exit(0)
             
 try:
     logo()
@@ -145,7 +166,7 @@ try:
     pagetitu()
 except (KeyboardInterrupt):
     print "Saliendo."
-    pass
+    sys.exit(0)
 
 def gen_xml(record):
 
