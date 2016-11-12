@@ -2,11 +2,17 @@
 Este pequeño codigo te ayuda a crear el archivo feed.xml para tu web!
 
 # Dependencias
-BeautifulSoup
+- BeautifulSoup
+
+- pysftp 
 
  Instalalo de esta forma.
  
-$ pip install BeautifulSoup
+$ pip install BeautifulSoup pysftp
+
+Si tienen algun problema al tratar de instalar pysftp solo instalen lo siguiente.
+
+$ sudo apt-get install libffi-dev libssl-dev
 
  si no tienes pip instalado lo instaladas de esta forma para Debian. o Basados.
  
