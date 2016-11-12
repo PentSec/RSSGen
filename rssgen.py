@@ -21,6 +21,7 @@ import sys
 import argparse
 from copy import copy
 from copy import deepcopy
+import sftpxml
 #mira el README.MD y mira lo que falta.
 from BeautifulSoup import BeautifulSoup, BeautifulStoneSoup, Tag, NavigableString, CData
 
@@ -228,4 +229,5 @@ asd.write(ch)
 asd.write(rs)
 asd.seek(0)
 asd.close()
-print "Se añadio el Feed satisfactoriamente puedes ver el archivo feed.xml para confirmarlo"
+os.system("clear")
+sftpxml.questin()
