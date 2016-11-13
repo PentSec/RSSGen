@@ -27,6 +27,7 @@ def questin():
             catarch=raw_input("s/n: ")
             if catarch=="s":
                 os.system("cat feed.xml")
+                print ""
                 print "quieres seguir con la subida del archivo a tu host? s:continuar n:cancelar"
                 subida=raw_input("s/n: ")
                 if subida=="s":
@@ -121,7 +122,28 @@ def localdir():
         if dirlocal=="":
             print "El host no puede estar vacio"
         else:
+            os.system("clear")
+            checkall()
+    except KeyboardInterrupt:
+        print "Saliendo."
+        sys.exit(0)
+
+def checkall():
+    try:
+        print hostname
+        print hostport
+        print hostuser
+        print dirlocal
+        print ""
+        print "Tu informacion esta correcta? s:Si n:No"
+        checkinfo=raw_input("s/n: ")
+        if checkinfo=="s":
             sftpex()
+        elif checkinfo=="n":
+            datohost()
+        else:
+            print "El campo no puede estar vacio."
+            checkall()
     except KeyboardInterrupt:
         print "Saliendo."
         sys.exit(0)
