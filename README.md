@@ -21,7 +21,7 @@ Edita el archivo. donde te lo indica con tu informacion
 
 # Soporte y Contacto
 ---
-> IRC: Server: irc.stormbit.net | Canal: #Linux | Puerto: 6697 (SSL)
+> IRC: Server: irc.rueven.online | Canal: #Pentsec | Puerto: 6697 (SSL)
 
 > XMPP PentSec@cock.li
 
