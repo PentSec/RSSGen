@@ -73,7 +73,7 @@ Uriliza rssgen.py -h para ver las opciones
 --------------------------------------------------                        
 """
 
-analizador = argparse.ArgumentParser(prog='rssgen.py',usage='python2 rssgen.py',description='Con este programa puedes generar archivos RSS para ponerlos en tu web. basico y simple de utilizar :D cualquier duda mi correo pentsec@cock.li puedes encontrarme en irc.stormbit.net #shl y #linux :D')
+analizador = argparse.ArgumentParser(prog='rssgen.py',usage='python2 rssgen.py',description='Con este programa puedes generar archivos RSS para ponerlos en tu web. basico y simple de utilizar :D cualquier duda mi correo pentsec@cock.li puedes encontrarme en irc.fukin.tech #dev #pentsec :D')
 analizador.add_argument("-u", "--update", help="Actualiza RSSGen a la mas version mas reciente.", action="store_true")
 analizador.add_argument("-v", "--version", help="Version de RSSGen", action="store_true")
 muestra = analizador.parse_args()
